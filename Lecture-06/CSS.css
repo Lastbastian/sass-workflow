@@ -1,4 +1,27 @@
-#parent .content .child, #parent .sign .child, #parent video .child, #parent img .child, #parent elementOne .child, #parent ElementTwo .child, #parent ElementThree .child {
+/* Inherrited Selectors */
+/*#parent#button{
+background:green;
+
+  #child-One, .another, .evenmore {
+    background:yellow;
+    font-size: 1em;
+  }
+
+  #child-Two{
+    font-weight: 200;
+    #inner-child .content{
+      background-color: blue;
+    }
+  }
+
+  &.HasClass#button{
+    background: blue;
+    font-weight: bold;
+    font-style: italic;
+  }
+}*/
+/* Inherrited Properties */
+#parent .content .child, #parent .sign .child, #parent video img elementOne .child, video img #parent elementOne .child, #parent elementTwo .child, #parent elementThree .child {
   background: green;
   font-size: 2em;
 }
@@ -6,3 +29,5 @@
 .content {
   line-height: 2em;
 }
+
+/*# sourceMappingURL=CSS.css.map */

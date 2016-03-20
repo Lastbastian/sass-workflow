@@ -1,42 +1,41 @@
-$el :  button;
-$list : elementOne, ElementTwo, ElementThree;
-/////////////////////////////////////// Inheritated Selectors ////////////////////////////////////////////////////
+$el: button;
+$list: elementOne, elementTwo, elementThree;
+/* Inherrited Selectors */
+/*#parent##{$el}{
+background:green;
 
-//#parent ##{ $el } {
-//      background:green;
-//
-//      #child-One, .another, .evenmore{
-//            background:yellow;
-//            font-size:1em;
-//      }
-//
-//      #child-Two{
-//            font-weight:200;
-//            #inner-child .content{
-//                  background:blue;
-//            }
-//      }
-//
-//      &.HasClass ##{ $el } {
-//            background: blue;
-//            font-weight: bold;
-//            font-style: italic;
-//      }
-//
-//}
+  #child-One, .another, .evenmore {
+    background:yellow;
+    font-size: 1em;
+  }
 
-/////////////////////////////////////// Inheritated Properties ///////////////////////////////////////////////////
+  #child-Two{
+    font-weight: 200;
+    #inner-child .content{
+      background-color: blue;
+    }
+  }
+
+  &.HasClass##{$el}{
+    background: blue;
+    font-weight: bold;
+    font-style: italic;
+  }
+}*/
+
+/* Inherrited Properties */
 
 #parent %shared .child{
-      background:green;
-      font-size:2em;
+  background:green;
+  font-size:2em;
 }
 
-.content {
-      @extend %shared;
-      line-height: 2em;
- }
-
- .sign, video, img, #{ $list } {
-       @extend %shared;
+.content{
+  @extend %shared;
+  line-height: 2em;
 }
+
+.sign, video img #{$list} {
+  @extend %shared
+}
+
